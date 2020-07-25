@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/src/components/crack.js
+
 
 # production
 /build
