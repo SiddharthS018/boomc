@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
 
-class SelectedDish extends Component{
+class DishDetail extends Component{
 
 constructor(props){
     super(props)
@@ -11,16 +11,13 @@ constructor(props){
 }
 
  render(){
-   let dish = this.props.status
+   let dish = this.props.dish
 
         if(dish != null){
             const addComment = dish.comments.map((comment) =>{
                 return(
                 <div>
-                {/* <CardText>{comment.comment}</CardText>
-
-                <CardText>{" -- "+ comment.author +" , "+ comment.date}</CardText> */}
-
+                    
                 <p>{comment.comment}</p>
                 <p>{"-- "+ comment.author +" , "+ comment.date.substring(0,10)}</p>
                 </div>
@@ -39,12 +36,7 @@ constructor(props){
                 </Card>
                 </div>
                 <div className = 'col-sm-5 col-12 m-1'>
-                {/* <Card>
-                    <CardBody>
-                        <CardTitle>Comments</CardTitle>
-                        {addComment}
-                    </CardBody>
-                </Card>  */}
+
                 
                 <h4>Comments</h4>
                 <ul>
@@ -59,7 +51,7 @@ constructor(props){
         }
         else{
             return(
-                <div></div>
+                <div>id varla</div>
             )
         }
     }
@@ -67,4 +59,4 @@ constructor(props){
  }
 
 
-export default SelectedDish
+export default DishDetail
